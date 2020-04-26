@@ -7,7 +7,89 @@
     <link rel="stylesheet" href="./css/app.css" />
   </head>
   <body>
-    <h1>Trello Demo</h1>
+    <header class="row header">
+      <div class="col">
+        <h1>Trello</h1>
+      </div>
+      <div class="col search-container">
+        <input type="text" class="form-control" name="search" id="search" />
+      </div>
+      <div class="col user-icon">
+        <img src="./img/1.jpg" alt="User image" />
+      </div>
+    </header>
+    <main>
+      <section class="row grid">
+        <div class="grid-col">
+          <h2>Backlog:</h2>
+          <button class="btn btn-add">+</button>
+          <div class="card-container">
+            <div class="card">
+              <h3 class="card-title">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              </h3>
+              <img src="./img/1.jpg" alt="User image" />
+              <div class="card-tags">
+                <span class="tag high-priority">Low</span>
+                <span class="tag browsers">Chrome</span>
+              </div>
+            </div>
+            <div class="card">
+              <h3 class="card-title">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              </h3>
+              <img src="./img/1.jpg" alt="User image" />
+              <div class="card-tags">
+                <span class="tag low-priority">Low</span>
+                <span class="tag browsers">Chrome</span>
+              </div>
+            </div>
+            <div class="card">
+              <h3 class="card-title">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              </h3>
+              <img src="./img/1.jpg" alt="User image" />
+              <div class="card-tags">
+                <span class="tag priority">Low</span>
+                <span class="tag browsers">Chrome</span>
+              </div>
+            </div>
+            <div class="card">
+              <h3 class="card-title">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              </h3>
+              <img src="./img/1.jpg" alt="User image" />
+              <div class="card-tags">
+                <span class="tag priority">Low</span>
+                <span class="tag browsers">Chrome</span>
+              </div>
+            </div>
+            <div class="card">
+              <h3 class="card-title">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              </h3>
+              <img src="./img/1.jpg" alt="User image" />
+              <div class="card-tags">
+                <span class="tag priority">Low</span>
+                <span class="tag browsers">Chrome</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-col">
+          <h2>In Progress</h2>
+        </div>
+        <div class="grid-col">
+          <h2>Code Review</h2>
+        </div>
+        <div class="grid-col">
+          <h2>Done</h2>
+        </div>
+      </section>
+    </main>
+    <footer class="row">
+      <h3>&copy; Trello 2020 All Rights Reserved.</h3>
+    </footer>
 
     <script src="./js/app.js"></script>
   </body>
