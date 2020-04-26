@@ -1,4 +1,19 @@
-const cardContainer = document.querySelector('.card-container');
+// Attach event listners
+function attachEventListeners() {
+  const cards = document.querySelectorAll('.card');
+  const cardContainerAll = document.querySelectorAll('.card-container');
+  cards.forEach((card) => {
+    card.addEventListener('dragstart', () => card.classList.add('dragging'));
+    card.addEventListener('dragend', () => card.classList.remove('dragging'));
+  });
+  cardContainerAll.forEach((container) => {
+    container.addEventListener('dragover', (e) => {
+      const dragElement = document.querySelector('.dragging');
+      e.preventDefault();
+      container.appendChild(dragElement);
+    });
+  });
+}
 
 const getTasks = () => {
   return JSON.parse(localStorage.getItem('tasks'));
@@ -10,7 +25,7 @@ const setTasks = (tasks) => {
 
 const renderCard = (task) => {
   return `
-        <div class="card">
+        <div class="card" data-taskId="${task.id}" draggable="true">
             <h3 class="card-title">
             ${task.title}
             </h3>
@@ -55,6 +70,8 @@ const renderTaskCard = (tasks) => {
     const cardContainer = document.querySelector(`#${key}`);
     cardContainer.innerHTML = renderedTasks;
   }
+
+  attachEventListeners();
 };
 
 (async function () {

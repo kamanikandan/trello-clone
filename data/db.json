@@ -12,7 +12,7 @@
     "browsers": "All"
   },
   {
-    "id": 1,
+    "id": 2,
     "title": "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
     "status": "progress",
     "assignedTo": {
@@ -24,7 +24,7 @@
     "browsers": "All"
   },
   {
-    "id": 1,
+    "id": 3,
     "title": "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
     "status": "review",
     "assignedTo": {
@@ -36,7 +36,7 @@
     "browsers": "All"
   },
   {
-    "id": 1,
+    "id": 4,
     "title": "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
     "status": "done",
     "assignedTo": {
@@ -48,7 +48,7 @@
     "browsers": "All"
   },
   {
-    "id": 1,
+    "id": 5,
     "title": "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
     "status": "backlog",
     "assignedTo": {
@@ -60,7 +60,7 @@
     "browsers": "All"
   },
   {
-    "id": 1,
+    "id": 6,
     "title": "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
     "status": "review",
     "assignedTo": {

@@ -12,7 +12,12 @@
         <h1>Trello</h1>
       </div>
       <div class="col search-container">
-        <input type="text" class="form-control" name="search" id="search" />
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Search for tasks..."
+          id="search"
+        />
       </div>
       <div class="col user-icon">
         <img src="./img/1.jpg" alt="User image" />
@@ -23,70 +28,19 @@
         <div class="grid-col">
           <h2>Backlog:</h2>
           <button class="btn btn-add">+</button>
-          <div id="backlog" class="card-container">
-            <div class="card">
-              <h3 class="card-title">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              </h3>
-              <img src="./img/1.jpg" alt="User image" />
-              <div class="card-tags">
-                <span class="tag high-priority">Low</span>
-                <span class="tag browsers">Chrome</span>
-              </div>
-            </div>
-            <div class="card">
-              <h3 class="card-title">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              </h3>
-              <img src="./img/1.jpg" alt="User image" />
-              <div class="card-tags">
-                <span class="tag low-priority">Low</span>
-                <span class="tag browsers">Chrome</span>
-              </div>
-            </div>
-            <div class="card">
-              <h3 class="card-title">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              </h3>
-              <img src="./img/1.jpg" alt="User image" />
-              <div class="card-tags">
-                <span class="tag priority">Low</span>
-                <span class="tag browsers">Chrome</span>
-              </div>
-            </div>
-            <div class="card">
-              <h3 class="card-title">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              </h3>
-              <img src="./img/1.jpg" alt="User image" />
-              <div class="card-tags">
-                <span class="tag priority">Low</span>
-                <span class="tag browsers">Chrome</span>
-              </div>
-            </div>
-            <div class="card">
-              <h3 class="card-title">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              </h3>
-              <img src="./img/1.jpg" alt="User image" />
-              <div class="card-tags">
-                <span class="tag priority">Low</span>
-                <span class="tag browsers">Chrome</span>
-              </div>
-            </div>
-          </div>
+          <div id="backlog" class="card-container"></div>
         </div>
         <div class="grid-col">
-          <h2>In Progress</h2>
-          <div id="progress"></div>
+          <h2>In Progress:</h2>
+          <div id="progress" class="card-container"></div>
         </div>
         <div class="grid-col">
-          <h2>Code Review</h2>
-          <div id="review"></div>
+          <h2>Code Review:</h2>
+          <div id="review" class="card-container"></div>
         </div>
         <div class="grid-col">
-          <h2>Done</h2>
-          <div id="done"></div>
+          <h2>Done:</h2>
+          <div id="done" class="card-container"></div>
         </div>
       </section>
     </main>

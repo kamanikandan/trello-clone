@@ -48,15 +48,17 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
+  /* height: 100vh; */
 }
 
 .grid-col {
+  /* height: 100vh; */
   padding: 15px 10px;
   background-color: #edf1f2;
 }
 
 .grid-col h2 {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: normal;
   margin-bottom: 20px;
 }
@@ -74,6 +76,10 @@ body {
   font-weight: normal;
   box-shadow: 1px 2px 1px #ddd;
   cursor: pointer;
+}
+
+.card-container {
+  height: 100%;
 }
 
 .card {
