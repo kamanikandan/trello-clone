@@ -14,7 +14,31 @@
   {
     "id": 1,
     "title": "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-    "status": "backlog",
+    "status": "progress",
+    "assignedTo": {
+      "userId": "user_1",
+      "username": "Adam Hornibrook",
+      "img": "img/1.jpg"
+    },
+    "priority": "high",
+    "browsers": "All"
+  },
+  {
+    "id": 1,
+    "title": "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+    "status": "review",
+    "assignedTo": {
+      "userId": "user_1",
+      "username": "Adam Hornibrook",
+      "img": "img/1.jpg"
+    },
+    "priority": "medium",
+    "browsers": "All"
+  },
+  {
+    "id": 1,
+    "title": "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+    "status": "done",
     "assignedTo": {
       "userId": "user_1",
       "username": "Adam Hornibrook",
@@ -38,31 +62,7 @@
   {
     "id": 1,
     "title": "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-    "status": "backlog",
-    "assignedTo": {
-      "userId": "user_1",
-      "username": "Adam Hornibrook",
-      "img": "img/1.jpg"
-    },
-    "priority": "low",
-    "browsers": "All"
-  },
-  {
-    "id": 1,
-    "title": "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-    "status": "backlog",
-    "assignedTo": {
-      "userId": "user_1",
-      "username": "Adam Hornibrook",
-      "img": "img/1.jpg"
-    },
-    "priority": "low",
-    "browsers": "All"
-  },
-  {
-    "id": 1,
-    "title": "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-    "status": "backlog",
+    "status": "review",
     "assignedTo": {
       "userId": "user_1",
       "username": "Adam Hornibrook",
