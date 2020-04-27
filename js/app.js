@@ -1,7 +1,22 @@
+const getTasks = () => {
+  return JSON.parse(localStorage.getItem('tasks'));
+};
+
+const setTasks = (tasks) => {
+  localStorage.setItem('tasks', JSON.stringify(tasks));
+};
+let task_Id = 0;
+let tasks = getTasks() || [];
+
 // Attach event listners
 function attachEventListeners() {
   const cards = document.querySelectorAll('.card');
+  const addTaskContainer = document.querySelector('.add-task');
+  const taskBoardContainer = document.querySelector('.board-container');
   const cardContainerAll = document.querySelectorAll('.card-container');
+  const btnSubmit = document.querySelector('#addForm');
+  const addBtn = document.querySelector('#btnAdd');
+
   cards.forEach((card) => {
     card.addEventListener('dragstart', () => card.classList.add('dragging'));
     card.addEventListener('dragend', () => card.classList.remove('dragging'));
@@ -9,18 +24,52 @@ function attachEventListeners() {
   cardContainerAll.forEach((container) => {
     container.addEventListener('dragover', (e) => {
       const dragElement = document.querySelector('.dragging');
+      const beforeEl = document.querySelector('.dragover');
       e.preventDefault();
       container.appendChild(dragElement);
     });
   });
+
+  addBtn.addEventListener('click', () => {
+    taskBoardContainer.classList.add('hide');
+    addTaskContainer.classList.remove('hide');
+  });
+
+  btnSubmit.addEventListener('submit', (e) => {
+    e.preventDefault();
+    createTask();
+    btnSubmit.reset();
+  });
 }
 
-const getTasks = () => {
-  return JSON.parse(localStorage.getItem('tasks'));
-};
+const createTask = () => {
+  const addTaskContainer = document.querySelector('.add-task');
+  const taskBoardContainer = document.querySelector('.board-container');
+  const taskName = document.querySelector('#task_title');
+  const taskAssigned = document.querySelector('#task_assigned');
+  const taskStatus = document.querySelector('#task_status');
+  const taskPriority = document.querySelector('#task_priority');
+  const taskBrowser = document.querySelector('#task_browser');
 
-const setTasks = (tasks) => {
-  localStorage.setItem('tasks', JSON.stringify(tasks));
+  const task = {
+    id: ++task_Id,
+    title: taskName.value,
+    status: taskStatus.value,
+    assignedTo: {
+      userId: taskAssigned.value,
+      username: 'Adam Hornibrook',
+      img: 'img/1.jpg',
+    },
+    priority: taskPriority.value,
+    browsers: taskBrowser.value,
+  };
+
+  tasks.push(task);
+  setTasks(tasks);
+  renderTaskCard(tasks);
+  attachEventListeners();
+  taskBoardContainer.classList.remove('hide');
+  addTaskContainer.classList.add('hide');
 };
 
 const renderCard = (task) => {
@@ -30,6 +79,7 @@ const renderCard = (task) => {
             ${task.title}
             </h3>
             <img src="./img/1.jpg" alt="User image" />
+            <h4>#${task.id}</h4>
             <div class="card-tags">
             <span class="tag ${task.priority}-priority">Low</span>
             <span class="tag browsers">${task.browsers}</span>
@@ -70,15 +120,8 @@ const renderTaskCard = (tasks) => {
     const cardContainer = document.querySelector(`#${key}`);
     cardContainer.innerHTML = renderedTasks;
   }
-
-  attachEventListeners();
 };
 
-(async function () {
-  let tasks = getTasks() || [];
-
-  let response = await fetch('./data/db.json');
-  tasks = await response.json();
-  setTasks(tasks);
-  renderTaskCard(tasks);
-})();
+setTasks(tasks);
+renderTaskCard(tasks);
+attachEventListeners();

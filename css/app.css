@@ -27,6 +27,10 @@ body {
   cursor: pointer;
 }
 
+.board-container.hide {
+  display: none;
+}
+
 .search-container {
   display: flex;
 }
@@ -122,6 +126,44 @@ body {
 }
 .card-tags .tag.high-priority {
   background: #e8384f;
+}
+.add-task.hide {
+  display: none;
+}
+.add-task form {
+  width: 50%;
+}
+.add-task h1 {
+  margin-bottom: 20px;
+}
+.add-task .form-group {
+  margin-bottom: 10px;
+}
+.add-task label {
+  display: block;
+}
+
+.add-task .form-control {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 15px;
+}
+
+.add-task .btn {
+  width: 200px;
+  height: 50px;
+  outline: none;
+  border: none;
+  background-color: #a4ce30;
+  color: #fff;
+  font-size: 18px;
+  font-weight: normal;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 footer h3 {

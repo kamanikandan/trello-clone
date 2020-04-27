@@ -24,24 +24,81 @@
       </div>
     </header>
     <main>
-      <section class="row grid">
-        <div class="grid-col">
-          <h2>Backlog:</h2>
-          <button class="btn btn-add">+</button>
-          <div id="backlog" class="card-container"></div>
-        </div>
-        <div class="grid-col">
-          <h2>In Progress:</h2>
-          <div id="progress" class="card-container"></div>
-        </div>
-        <div class="grid-col">
-          <h2>Code Review:</h2>
-          <div id="review" class="card-container"></div>
-        </div>
-        <div class="grid-col">
-          <h2>Done:</h2>
-          <div id="done" class="card-container"></div>
-        </div>
+      <section class="board-container">
+        <section class="row grid">
+          <div class="grid-col">
+            <h2>Backlog:</h2>
+            <button id="btnAdd" class="btn btn-add">+</button>
+            <div id="backlog" class="card-container"></div>
+          </div>
+          <div class="grid-col">
+            <h2>In Progress:</h2>
+            <div id="progress" class="card-container"></div>
+          </div>
+          <div class="grid-col">
+            <h2>Code Review:</h2>
+            <div id="review" class="card-container"></div>
+          </div>
+          <div class="grid-col">
+            <h2>Done:</h2>
+            <div id="done" class="card-container"></div>
+          </div>
+        </section>
+      </section>
+      <section class="row add-task hide">
+        <h1>Create a new task</h1>
+        <form id="addForm">
+          <div class="form-group">
+            <label for="task_title">Task Name:</label>
+            <input
+              type="text"
+              placeholder="Enter your task name..."
+              class="form-control"
+              id="task_title"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="task_assigned">Assigned To:</label>
+            <input
+              type="text"
+              placeholder="Assigned to..."
+              class="form-control"
+              id="task_assigned"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="task_status">Status:</label>
+            <select required class="form-control" id="task_status">
+              <option value="">------</option>
+              <option value="backlog">Backlog</option>
+              <option value="progress">In Progress</option>
+              <option value="review">Code Review</option>
+              <option value="done">Done</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="task_priority">Priority:</label>
+            <select required class="form-control" id="task_priority">
+              <option value="">------</option>
+              <option value="low">Low</option>
+              <option value="medium">Medium</option>
+              <option value="high">High</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="task_browser">Browsers:</label>
+            <select required class="form-control" id="task_browser">
+              <option value="">------</option>
+              <option value="chrome">Chrome</option>
+              <option value="firefox">Firefox</option>
+              <option value="edge">Edge</option>
+              <option value="ie">IE</option>
+            </select>
+          </div>
+          <button class="btn btn-submit" type="submit">Create Task</button>
+        </form>
       </section>
     </main>
     <footer class="row">
